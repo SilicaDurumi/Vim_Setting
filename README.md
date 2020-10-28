@@ -1,1 +1,1 @@
-# Vim_Setting
+# .vimrc 
