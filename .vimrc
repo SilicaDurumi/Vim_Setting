@@ -64,8 +64,9 @@ function! InsertTabWrapper()
     endif
 endfunction
 
-" for C compile
 map <F2> :w!<CR>
+
+" for C compile
 map <F9> :! gcc % -o %<<CR>
 map <F10> :! ./%<<CR>
 
