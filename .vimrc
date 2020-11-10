@@ -1,3 +1,5 @@
+"git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
 set shell=/bin/bash
 set rtp+=~/.vim/bundle/Vundle.vim
 set encoding=utf-8
