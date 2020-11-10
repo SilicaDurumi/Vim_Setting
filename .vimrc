@@ -47,6 +47,7 @@ nmap <Leader>n :NERDTreeToggle<CR>
 
 let delimitMate_expand_cr=1
 
+set nu
 set smartindent
 set tabstop=4
 set expandtab
