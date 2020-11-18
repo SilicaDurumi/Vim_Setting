@@ -19,12 +19,12 @@ Plugin 'vim-airline/vim-airline' " vim status bar
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'blueyed/vim-diminactive'
 Plugin 'Raimondi/delimitMate'
+Plugin 'preservim/nerdcommenter'
 
 call vundle#end()
 
 set t_Co=256
 colorscheme jellybeans
-nmap <F8> :Tagbar<CR>
 
 let g:indentguides_spacechar = '┆'
 let g:indentguides_tabchar = '|'
@@ -46,14 +46,16 @@ highlight Comment term=bold cterm=bold ctermfg=4
 
 let mapleader=","
 nmap <Leader>n :NERDTreeToggle<CR>
+nmap <F8> :Tagbar<CR>
+nmap <Leader>t :Tagbar<CR>
 
 let delimitMate_expand_cr=1
 
 set nu
 set smartindent
-set tabstop=4
+set tabstop=2
 set expandtab
-set shiftwidth=4
+set shiftwidth=2
 
 function! InsertTabWrapper()
     let col=col('.')-1
@@ -68,10 +70,35 @@ function! InsertTabWrapper()
 endfunction
 
 map <F2> :w!<CR>
+nmap <Leader>2 :w!<CR>
 
 " for C compile
 map <F9> :! gcc % -o %<<CR>
 map <F10> :! ./%<<CR>
+nmap <Leader>9 :! gcc % -o %<<CR>
+nmap <Leader>0 :! ./%<<CR>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

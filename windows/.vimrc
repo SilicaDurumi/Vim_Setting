@@ -1,6 +1,7 @@
 "git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
-filetype off
+set encoding=utf-8
+set fileencoding=utf-8
 set shellslash
 set rtp+=~/vimfiles/bundle/Vundle.vim
 call vundle#begin('~/vimfiles/bundle')
@@ -15,14 +16,14 @@ Plugin 'tpope/vim-fugitive' " vim with git command(e.g., Gdiff)
 Plugin 'vim-airline/vim-airline' " vim status bar
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'blueyed/vim-diminactive'
+Plugin 'preservim/nerdcommenter'
 
 call vundle#end()
 
 set t_Co=256
 colorscheme jellybeans
-nmap <F8> :Tagbar<CR>
 
-let g:indentguides_spacechar = 'â”?'
+let g:indentguides_spacechar = '???'
 let g:indentguides_tabchar = '|'
 let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_start_level=2
@@ -41,15 +42,19 @@ filetype indent on
 highlight Comment term=bold cterm=bold ctermfg=4
 
 let mapleader=","
+
+nmap <F8> :Tagbar<CR>
+nmap <Leader>t :Tagbar<CR>
 nmap <Leader>n :NERDTreeToggle<CR>
+
 
 let delimitMate_expand_cr=1
 
 set nu
 set smartindent
-set tabstop=4
+set tabstop=2
 set expandtab
-set shiftwidth=4
+set shiftwidth=2
 
 function! InsertTabWrapper()
     let col=col('.')-1
@@ -63,11 +68,29 @@ function! InsertTabWrapper()
     endif
 endfunction
 
-map <F2> :w!<CR>
+nmap <F2> :w!<CR>
+nmap <Leader>2 :w!<CR>
 
 " for C compile
-map <F9> :! gcc % -o %<<CR>
-map <F10> :! ./%<<CR>
+nmap <F9> :! gcc % -o %<<CR>
+nmap <F10> :! ./%<<CR>
+nmap <Leader>9 :! gcc % -o %c<<CR>
+nmap <Leader>0 :! ./%<<CR>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
